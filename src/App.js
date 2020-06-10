@@ -23,10 +23,24 @@ const App = () => {
   // Add new course
   function addCourse(e){
     e.preventDefault()
-    console.log('new course added')
 
     let current = courses.current
     let newCourses = courses.courses
+
+    if(current === ''){
+      let elem = document.querySelector(".course_add")
+      elem.innerHTML = 'Oops, your course has not be empty !'
+      elem.classList.remove('hide')
+      elem.classList.remove('alert-warning')
+      elem.classList.remove('alert-success')
+      elem.classList.add('alert-danger')
+      
+      setTimeout(function(){ 
+        elem.classList.add('hide')
+      }, 3000);
+
+      return false
+    }
  
     newCourses.push({name : current})
   
@@ -41,6 +55,9 @@ const App = () => {
     let elem = document.querySelector(".course_add")
     elem.innerHTML = 'Good, your course added successfully.'
     elem.classList.remove('hide')
+    elem.classList.remove('alert-warning')
+    elem.classList.remove('alert-danger')
+    elem.classList.add('alert-success')
 
     setTimeout(function(){ 
       elem.classList.add('hide')
@@ -71,6 +88,9 @@ const App = () => {
     let elem = document.querySelector(".course_add")
     elem.innerHTML = 'Good, your course deleted successfully.'
     elem.classList.remove('hide')
+    elem.classList.remove('alert-warning')
+    elem.classList.remove('alert-danger')
+    elem.classList.add('alert-success')
 
     setTimeout(function(){ 
       elem.classList.add('hide')
@@ -90,6 +110,9 @@ const App = () => {
     let elem = document.querySelector(".course_add")
     elem.innerHTML = 'Good, your course updated successfully.'
     elem.classList.remove('hide')
+    elem.classList.remove('alert-warning')
+    elem.classList.remove('alert-danger')
+    elem.classList.add('alert-success')
 
     setTimeout(function(){ 
       elem.classList.add('hide')
