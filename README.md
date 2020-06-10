@@ -1,4 +1,4 @@
-# react-js-crud-app-list-courses
+# React JS Crud App List Courses
 React JS Crud App List Courses : To create an app courses list with react js and Hooks
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
