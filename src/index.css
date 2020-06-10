@@ -79,3 +79,22 @@ li > button:last-of-type {
 ul > form {
   margin: 15px 0
 } 
+p.alert {
+  padding: 15px;
+}
+p.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+p.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+.hide{
+  display: none
+}
+.show{
+  display: block
+}
